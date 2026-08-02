@@ -229,11 +229,17 @@
 @utility nx-marquee-track {
   display: flex;
   width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
   animation: nx-marquee var(--nx-speed, 60s) linear infinite;
 }
 @utility nx-marquee-track-rev {
   display: flex;
   width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
   animation: nx-marquee-rev var(--nx-speed, 70s) linear infinite;
 }
 
