@@ -12,7 +12,7 @@ export function Header() {
       <div className="mx-auto flex h-[74px] max-w-[1280px] items-center justify-between gap-3 px-4 md:px-8">
         <Link to="/" className="flex items-center gap-3" aria-label="نيكسا التعليمية">
           <img
-            src={logoHorizontal.url}
+            src={logoHorizontal}
             alt="شعار نيكسا التعليمية"
             width={172}
             height={54}
