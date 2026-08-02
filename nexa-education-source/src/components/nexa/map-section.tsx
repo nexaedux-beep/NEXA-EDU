@@ -36,7 +36,7 @@ export function MapSection() {
           <div className="space-y-5">
             <h2 className="text-[24px] font-extrabold md:text-[32px]">أين تدرس؟ اختر مدينتك</h2>
             <p className="text-[14px] leading-8 text-muted-foreground">
-              نغطي أهم المدن الجامعية في تركيا وقبرص الشمالية، مع مكتب رئيسي في إسطنبول لاستقبال الطلاب
+              نغطي أهم المدن الجامعية في تركيا وقبرص ، مع مكتب رئيسي في إسطنبول لاستقبال الطلاب
               ومتابعة كامل إجراءات القبول والإقامة.
             </p>
 
@@ -75,7 +75,7 @@ export function MapSection() {
                 <Phone className="h-4 w-4" /> <span dir="ltr">{site.phone}</span>
               </a>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Clock className="h-4 w-4" /> يومياً ٠٩:٠٠ — ٢١:٠٠ بتوقيت إسطنبول
+                <Clock className="h-4 w-4" /> يومياً 09:00 — 18:00 بتوقيت تركيا
               </div>
               <div className="flex flex-wrap gap-2 pt-1">
                 <a
