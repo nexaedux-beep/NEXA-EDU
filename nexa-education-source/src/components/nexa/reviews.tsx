@@ -54,12 +54,12 @@ export function Reviews() {
       </div>
 
       <div className="nx-marquee-wrap nx-mask-x mt-8 space-y-4 overflow-hidden">
-        <div className="nx-marquee-track" style={{ ["--nx-speed" as string]: "140s" }}>
+        <div className="nx-marquee-track" style={{ ["--nx-speed" as string]: "120s" }}>
           {[...rowA, ...rowA].map((t, i) => (
             <ReviewCard key={`a-${t.name}-${i}`} t={t} />
           ))}
         </div>
-        <div className="nx-marquee-track-rev" style={{ ["--nx-speed" as string]: "165s" }}>
+        <div className="nx-marquee-track-rev" style={{ ["--nx-speed" as string]: "120s" }}>
           {[...rowB, ...rowB].map((t, i) => (
             <ReviewCard key={`b-${t.name}-${i}`} t={t} />
           ))}
