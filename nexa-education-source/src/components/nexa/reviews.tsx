@@ -48,7 +48,7 @@ export function Reviews() {
           </div>
           <div className="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-[12px] font-bold">
             <Star className="h-4 w-4 fill-primary text-primary" />
-            تقييم ٤٫٩ من ٥
+             تقييم 4٫9 من 5
           </div>
         </div>
       </div>
