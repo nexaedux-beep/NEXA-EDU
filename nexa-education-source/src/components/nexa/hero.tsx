@@ -59,7 +59,7 @@ export function Hero() {
           </h1>
 
           <p className="max-w-[580px] text-[15px] leading-8 text-muted-foreground md:text-[17px]">
-            {universities.length} شراكات استراتيجية مع نخبة الجامعات الخاصة المعتمدة، توفر لك قبولًا موثوقًا، ومنحًا وخصومات حصرية، ودعمًا متكاملًا في كل خطوة من رحلتك الأكاديمية  </p>
+            {universities.length} شراكات استراتيجية مع نخبة الجامعات الخاصة المعتمدة، توفر لك قبولًا موثوقًا، ومنحًا وخصومات حصرية، ودعمًا متكاملًا في كل خطوة من رحلتك الأكاديمية</p>
 
           <div className="flex flex-wrap gap-3">
             <a
