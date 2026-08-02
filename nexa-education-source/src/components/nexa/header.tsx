@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Moon, Sun, LayoutDashboard, MessageCircle } from "lucide-react";
-import logoHorizontal from "@/assets/nexa-logo-mark.png";
+import logoHorizontal from "@/assets/nexa-logo-mark.png.png";
 import { site, waLink } from "@/lib/site";
 import { useTheme } from "@/lib/use-theme";
 
