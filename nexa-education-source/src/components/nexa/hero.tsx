@@ -3,7 +3,7 @@ import { ArrowLeft, GraduationCap, Sparkles } from "lucide-react";
 import campus1 from "@/assets/campus-1.jpg";
 import campus2 from "@/assets/campus-2.jpg";
 import campus3 from "@/assets/campus-3.jpg";
-import logoStacked from "@/assets/nexa-logo-stacked.png.asset.json";
+import logoStacked from "@/assets/nexa-logo-stacked.png.png";
 import { site, waLink } from "@/lib/site";
 import { universities } from "@/data/universities";
 import { useCountUp, useInView } from "@/lib/use-reveal";
@@ -59,9 +59,7 @@ export function Hero() {
           </h1>
 
           <p className="max-w-[580px] text-[15px] leading-8 text-muted-foreground md:text-[17px]">
-            {universities.length} جامعة خاصة مرتّبة بعناية: إسطنبول ٣٩ • أنقرة ٨ • إزمير ٣ • أنطاليا ٢ • قبرص
-            الشمالية ١٥. قبول مضمون، خصومات حقيقية حتى ٧٥٪، واستشارة مجانية بالكامل.
-          </p>
+            {universities.length} شراكات استراتيجية مع نخبة الجامعات الخاصة المعتمدة، توفر لك قبولًا موثوقًا، ومنحًا وخصومات حصرية، ودعمًا متكاملًا في كل خطوة من رحلتك الأكاديمية  </p>
 
           <div className="flex flex-wrap gap-3">
             <a
@@ -77,13 +75,13 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-bold transition-all hover:-translate-y-1 hover:border-primary hover:shadow-[var(--shadow-soft)]"
             >
-              تحدّث مع مستشار
+              احجز استشارتك
               <span dir="ltr" className="text-primary">{site.phone}</span>
             </a>
           </div>
 
           <div ref={ref} className="grid max-w-[520px] grid-cols-2 gap-3 pt-2 sm:grid-cols-4">
-            <Stat target={5200} label="طالب مسجّل" suffix="+" run={inView} />
+            <Stat target={8200} label="طالب مسجّل" suffix="+" run={inView} />
             <Stat target={universities.length} label="جامعة شريكة" suffix="+" run={inView} />
             <Stat target={20} label="دولة" suffix="+" run={inView} />
             <Stat target={2020} label="نعمل منذ" run={inView} />
@@ -122,7 +120,7 @@ export function Hero() {
           </div>
 
           <div className="nx-float absolute -bottom-5 -right-4 flex items-center gap-3 rounded-2xl border border-border bg-card p-3 shadow-[var(--shadow-float)]">
-            <img src={logoStacked.url} alt="شعار نيكسا" width={38} height={43} className="nx-logo h-11 w-auto object-contain" loading="lazy" />
+            <img src={logoStacked} alt="شعار نيكسا" width={38} height={43} className="nx-logo h-11 w-auto object-contain" loading="lazy" />
 
             <div>
               <div className="text-[12px] font-bold">{site.name}</div>
