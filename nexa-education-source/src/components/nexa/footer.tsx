@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { MessageCircle, Phone } from "lucide-react";
-import logoStacked from "@/assets/nexa-logo-stacked.png.asset.json";
+import logoStacked from "@/assets/nexa-logo-stacked.png.png";
 import { site, waLink } from "@/lib/site";
 import { SocialLinks } from "./social-links";
 
@@ -28,7 +28,7 @@ export function Footer() {
           <div className="space-y-3">
             <div className="flex items-center gap-4">
               <img
-                src={logoStacked.url}
+                src={logoStacked}
                 alt="شعار نيكسا التعليمية"
                 width={92}
                 height={104}
@@ -42,7 +42,7 @@ export function Footer() {
             </div>
 
             <p className="text-[12px] leading-6 text-muted-foreground">
-              وكيل قبولات معتمد لأفضل الجامعات الخاصة في تركيا وقبرص الشمالية.
+              وكيل معتمد لأفضل الجامعات الخاصة في تركيا وقبرص الشمالية.
             </p>
             <SocialLinks />
           </div>
