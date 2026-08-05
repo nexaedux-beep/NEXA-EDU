@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MessageCircle, Phone } from "lucide-react";
-import logoStacked from "@/assets/nexa-logo-stacked.png.asset.json";
+import logoStacked from "@/assets/nexa-logo-stacked.png.png";
 import { site, waLink } from "@/lib/site";
 import { useI18n } from "@/lib/i18n";
 import { SocialLinks } from "./social-links";
@@ -29,7 +29,7 @@ export function Footer() {
           <div className="space-y-3">
             <div className="flex items-center gap-4">
               <img
-                src={logoStacked.url}
+                src={logoStacked}
                 alt={site.name}
                 width={92}
                 height={104}
