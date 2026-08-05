@@ -5,7 +5,7 @@ import campus2 from "@/assets/campus-2.jpg";
 import campus3 from "@/assets/campus-3.jpg";
 import istanbul1 from "@/assets/istanbul-1.jpg";
 import istanbul2 from "@/assets/istanbul-2.jpg";
-import logoStacked from "@/assets/nexa-logo-stacked.png.asset.json";
+import logoStacked from "@/assets/nexa-logo-stacked.png.png";
 import { useI18n } from "@/lib/i18n";
 
 const frames = [istanbul1, campus1, istanbul2, campus2, campus3];
@@ -51,7 +51,7 @@ export function VideoShowcase() {
 
           <div className="absolute inset-0 grid place-items-center">
             <div className="nx-float flex flex-col items-center gap-3 rounded-3xl border border-white/20 bg-white/10 px-8 py-6 text-center backdrop-blur-md">
-              <img src={logoStacked.url} alt="NEXA Education" width={64} height={72} className="nx-logo h-16 w-auto object-contain" loading="lazy" />
+              <img src={logoStacked} alt="NEXA Education" width={64} height={72} className="nx-logo h-16 w-auto object-contain" loading="lazy" />
               <div className="text-[13px] font-extrabold tracking-wide text-white">NEXA EDUCATION</div>
               <div className="text-[11px] text-white/75">{t("video.caption")}</div>
             </div>
