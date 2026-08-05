@@ -3,7 +3,7 @@ import { ArrowLeft, GraduationCap, Sparkles } from "lucide-react";
 import campus1 from "@/assets/campus-1.jpg";
 import campus2 from "@/assets/campus-2.jpg";
 import campus3 from "@/assets/campus-3.jpg";
-import logoStacked from "@/assets/nexa-logo-stacked.png.asset.json";
+import logoStacked from "@/assets/nexa-logo-stacked.png.png";
 import { site, waLink } from "@/lib/site";
 import { universities } from "@/data/universities";
 import { useCountUp, useInView } from "@/lib/use-reveal";
@@ -123,7 +123,7 @@ export function Hero() {
 
 
         <div className="nx-float mt-10 flex w-fit items-center gap-3 rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-md md:absolute md:bottom-10 md:right-8 md:mt-0">
-          <img src={logoStacked.url} alt={site.name} width={38} height={43} className="h-11 w-auto object-contain" loading="lazy" />
+          <img src={logoStacked} alt={site.name} width={38} height={43} className="h-11 w-auto object-contain" loading="lazy" />
           <div>
             <div className="text-[12px] font-bold text-white">{site.name}</div>
             <div className="text-[10px] text-white/70">{site.address}</div>
