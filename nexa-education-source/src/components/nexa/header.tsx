@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Moon, Sun, LayoutDashboard, Menu, X } from "lucide-react";
-import logoHorizontal from "@/assets/nexa-logo-mark.png.asset.json";
+import logoHorizontal from "@/assets/nexa-logo-mark.png.png";
 import { useTheme } from "@/lib/use-theme";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitcher } from "./lang-switcher";
@@ -34,7 +34,7 @@ export function Header() {
       <div className="mx-auto flex h-[74px] max-w-[1280px] items-center justify-between gap-3 px-4 md:px-8">
         <Link to="/" className="flex items-center gap-3" aria-label="NEXA Education">
           <img
-            src={logoHorizontal.url}
+            src={logoHorizontal}
             alt="NEXA Education"
             width={172}
             height={54}
