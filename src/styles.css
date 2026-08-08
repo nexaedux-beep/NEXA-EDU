@@ -1,0 +1,520 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * NEXA Education — design system
+ * Light: crisp white surfaces + royal blue. Dark: deep navy ink.
+ * All colors are oklch tokens. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-logo-plate: var(--logo-plate);
+  --font-sans: "Cairo", system-ui, sans-serif;
+
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(1 0 0);
+  --surface: oklch(0.984 0.006 250);
+  --foreground: oklch(0.22 0.05 259);
+  --ink: oklch(0.22 0.05 259);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.05 259);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.05 259);
+  --primary: oklch(0.5 0.16 254);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.968 0.008 250);
+  --secondary-foreground: oklch(0.28 0.05 259);
+  --muted: oklch(0.968 0.008 250);
+  --muted-foreground: oklch(0.55 0.03 257);
+  --accent: oklch(0.95 0.03 250);
+  --accent-foreground: oklch(0.32 0.09 254);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --success: oklch(0.66 0.16 155);
+  --border: oklch(0.92 0.01 255);
+  --input: oklch(0.92 0.01 255);
+  --ring: oklch(0.5 0.16 254);
+  --logo-plate: oklch(1 0 0 / 0);
+  --shadow-soft: 0 10px 30px -12px oklch(0.5 0.16 254 / 0.25);
+
+  --shadow-float: 0 24px 60px -24px oklch(0.4 0.12 254 / 0.35);
+  --gradient-brand: linear-gradient(135deg, oklch(0.5 0.16 254), oklch(0.66 0.14 232));
+  --gradient-surface: linear-gradient(180deg, oklch(1 0 0), oklch(0.975 0.01 250));
+}
+
+.dark {
+  --background: oklch(0.17 0.03 258);
+  --surface: oklch(0.21 0.035 258);
+  --foreground: oklch(0.97 0.005 250);
+  --ink: oklch(0.97 0.005 250);
+  --card: oklch(0.22 0.035 258);
+  --card-foreground: oklch(0.97 0.005 250);
+  --popover: oklch(0.22 0.035 258);
+  --popover-foreground: oklch(0.97 0.005 250);
+  --primary: oklch(0.68 0.15 245);
+  --primary-foreground: oklch(0.16 0.03 258);
+  --secondary: oklch(0.27 0.04 258);
+  --secondary-foreground: oklch(0.97 0.005 250);
+  --muted: oklch(0.27 0.04 258);
+  --muted-foreground: oklch(0.72 0.03 255);
+  --accent: oklch(0.3 0.05 253);
+  --accent-foreground: oklch(0.95 0.01 250);
+  --destructive: oklch(0.66 0.19 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --success: oklch(0.72 0.15 155);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.68 0.15 245);
+  --logo-plate: oklch(1 0 0);
+  --shadow-soft: 0 10px 30px -12px oklch(0 0 0 / 0.6);
+
+  --shadow-float: 0 24px 60px -24px oklch(0 0 0 / 0.7);
+  --gradient-brand: linear-gradient(135deg, oklch(0.62 0.16 250), oklch(0.72 0.13 220));
+  --gradient-surface: linear-gradient(180deg, oklch(0.19 0.03 258), oklch(0.22 0.035 258));
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Cairo", system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--surface);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 999px;
+  }
+}
+
+/* ── Motion system ─────────────────────────────────────── */
+@keyframes nx-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@keyframes nx-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes nx-marquee-rev {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes nx-shine {
+  0% {
+    transform: translateX(-120%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(320%) skewX(-12deg);
+  }
+}
+@keyframes nx-rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes nx-ping-ring {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+@keyframes nx-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.5 0.16 254 / 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 16px oklch(0.5 0.16 254 / 0);
+  }
+}
+@keyframes nx-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(30px, -24px, 0) scale(1.08);
+  }
+}
+
+@utility nx-float {
+  animation: nx-float 6s ease-in-out infinite;
+}
+@utility nx-drift {
+  animation: nx-drift 16s ease-in-out infinite;
+}
+@utility nx-glow {
+  animation: nx-glow 2.6s ease-out infinite;
+}
+@utility nx-rise {
+  animation: nx-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@utility nx-ping-ring {
+  animation: nx-ping-ring 2.2s ease-out infinite;
+}
+
+@utility nx-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: nx-marquee var(--nx-speed, 60s) linear infinite;
+}
+@utility nx-marquee-track-rev {
+  display: flex;
+  width: max-content;
+  animation: nx-marquee-rev var(--nx-speed, 70s) linear infinite;
+}
+
+.nx-marquee-wrap:hover .nx-marquee-track,
+.nx-marquee-wrap:hover .nx-marquee-track-rev {
+  animation-play-state: paused;
+}
+
+@utility nx-shine {
+  position: relative;
+  overflow: hidden;
+}
+.nx-shine::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 40%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    oklch(1 0 0 / 0.45),
+    transparent
+  );
+  animation: nx-shine 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@utility nx-gradient-text {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility nx-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.nx-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-float);
+  border-color: color-mix(in oklab, var(--primary) 40%, transparent);
+}
+
+@utility nx-mask-x {
+  mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@utility nx-logo {
+  transition: filter 0.35s ease;
+}
+.dark .nx-logo {
+  filter: brightness(0) invert(1);
+}
+
+@utility nx-pin-pop {
+  animation: nx-pin-pop 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes nx-pin-pop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -30%) scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@utility nx-map-draw {
+  stroke-dasharray: 4000;
+  animation: nx-map-draw 3.2s ease forwards;
+}
+@keyframes nx-map-draw {
+  from {
+    stroke-dashoffset: 4000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ── Seamless marquee (never breaks, never empties) ───── */
+.nx-marquee-track,
+.nx-marquee-track-rev {
+  direction: ltr;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.nx-marquee-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: stretch;
+  gap: var(--nx-gap, 1rem);
+  padding-inline-end: var(--nx-gap, 1rem);
+}
+.nx-marquee-group > * {
+  flex: 0 0 auto;
+}
+
+/* ── Pro motion extras ────────────────────────────────── */
+@keyframes nx-fade-up {
+  from { opacity: 0; transform: translateY(34px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes nx-pop {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes nx-sheen {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+@keyframes nx-orbit {
+  from { transform: rotate(0deg) translateX(10px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(10px) rotate(-360deg); }
+}
+@keyframes nx-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@utility nx-fade-up {
+  animation: nx-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@utility nx-pop {
+  animation: nx-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+@utility nx-bob {
+  animation: nx-bob 3s ease-in-out infinite;
+}
+@utility nx-sheen-text {
+  background: linear-gradient(
+    90deg,
+    var(--foreground) 0%,
+    var(--primary) 40%,
+    var(--foreground) 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: nx-sheen 6s linear infinite;
+}
+
+@utility nx-tilt {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+}
+.nx-tilt:hover {
+  transform: perspective(900px) rotateX(3deg) rotateY(-4deg) translateY(-6px);
+  box-shadow: var(--shadow-float);
+}
+
+@utility nx-underline {
+  position: relative;
+}
+.nx-underline::after {
+  content: "";
+  position: absolute;
+  inset-inline: 12px;
+  bottom: 4px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gradient-brand);
+  transform: scaleX(0);
+  transform-origin: inline-start;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nx-underline:hover::after {
+  transform: scaleX(1);
+}
+
+@utility nx-grid-bg {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--primary) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--primary) 8%, transparent) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+/* ── Button & interaction effects ──────────────────────── */
+@utility nx-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background-color 0.35s ease;
+}
+.nx-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(100deg, transparent 20%, oklch(1 0 0 / 0.28) 45%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nx-btn:hover::before {
+  transform: translateX(120%);
+}
+.nx-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-float);
+}
+.nx-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+.nx-btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+@utility nx-press {
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.nx-press:hover {
+  transform: translateY(-2px);
+}
+.nx-press:active {
+  transform: scale(0.97);
+}
+
+/* ── University logo showcase ──────────────────────────── */
+@utility nx-logo-tile {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-2xl);
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    var(--gradient-brand) border-box;
+  border: 1.5px solid transparent;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+}
+.nx-logo-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 90% at 50% 0%, color-mix(in oklab, var(--primary) 16%, transparent), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+.group:hover .nx-logo-tile {
+  transform: translateY(-3px) scale(1.05) rotate(-2deg);
+  box-shadow: var(--shadow-soft);
+}
+.group:hover .nx-logo-tile::after {
+  opacity: 1;
+}
+
+/* Marquee must always run left→right physics, even inside RTL pages */
+.nx-marquee-wrap {
+  direction: ltr;
+}
+
+/* Horizontal snap carousel (hidden scrollbar) */
+.nx-scroll-x {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.nx-scroll-x::-webkit-scrollbar {
+  display: none;
+}
